@@ -37,10 +37,23 @@ namespace intership
             
             for (int i = 0; i < ans.Length; i++)
             {
+                if (i >= 5000)
+                {
+                    Text = "Показано " + i + " результатов из " + ans.Length + " :" + "\r\n" + "\r\n" + Text;
+                    break;
+                }
                 Text += ans[i];
                 Text += "\r\n";
             }
-            Out.Text += Text;
+            if (Text[0] == 'П')
+            {
+                Out.Text += Text;
+            }
+            else
+            {
+                Text = "Показано " + ans.Length + " результатов из " + ans.Length + " :" + "\r\n" + "\r\n" + Text;
+                Out.Text += Text;
+            }
         }
     }
 }

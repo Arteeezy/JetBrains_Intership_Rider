@@ -5,9 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:intership"
         mc:Ignorable="d"
-        Title="Поиск слов в англоязычном словаре" Height="450" Width="800">
+        Title="Поиск слов в англоязычном словаре" Height="450" Width="800" >
     <Grid Margin="0,0,0,-6">
-        <Label Content="Введите слово:" Margin="0,9,0,0" FontSize="24" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Top" >
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="#FF96049C" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Label Content="Введите слово:" Margin="0,9,0,0" FontSize="26" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Top" Background="#01FDFDFD" Height="38" Foreground="#FFCA7DFF" FontWeight="Bold" FontStyle="Italic" >
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -17,8 +23,8 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <TextBox x:Name="In" MaxLines ="1" Margin="152,57,152,339"/>
-        <Label Content="Результат:&#xD;&#xA;" Margin="332,132,0,0" FontSize="24" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Top" Width="254" >
+        <TextBox x:Name="In" MaxLines ="1" Margin="152,57,152,339" Background="#FFEDE1FF"/>
+        <Label Content="Результат:&#xD;&#xA;" Margin="0,131,0,0" FontSize="26" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Top" Width="172" Background="Transparent" Height="41" FontStyle="Italic" FontWeight="Bold" Foreground="#FFCA7DFF" >
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -28,7 +34,7 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <TextBox x:Name="Out" Margin="152,182,152,46"></TextBox>
-        <Button x:Name="ButtonSearch" Content="Найти" FontSize="18" Margin="531,101,152,284" Click="search"></Button>
+        <TextBox x:Name="Out" Margin="152,182,152,46" Background="#FFEFE3FF"></TextBox>
+        <Button x:Name="ButtonSearch" Content="Найти" FontSize="18" Margin="531,101,152,284" Click="search" Foreground="#FFCA7DFF" FontWeight="Bold" FontStyle="Italic" Background="#FF410066"></Button>
     </Grid>
 </Window>
