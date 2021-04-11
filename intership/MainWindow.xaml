@@ -24,7 +24,7 @@
             </Label.RenderTransform>
         </Label>
         <TextBox x:Name="In" MaxLines ="1" Margin="152,57,152,339" Background="#FFEDE1FF"/>
-        <Label Content="Результат:&#xD;&#xA;" Margin="0,131,0,0" FontSize="26" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Top" Width="172" Background="Transparent" Height="41" FontStyle="Italic" FontWeight="Bold" Foreground="#FFCA7DFF" >
+        <Label Content="Результат:&#xD;&#xA;" Margin="0,142,0,0" FontSize="26" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" VerticalAlignment="Top" Width="172" Background="Transparent" Height="41" FontStyle="Italic" FontWeight="Bold" Foreground="#FFCB80FF" >
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -34,7 +34,8 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <TextBox x:Name="Out" Margin="152,182,152,46" Background="#FFEFE3FF"></TextBox>
+        <TextBox x:Name="Out" Margin="152,204,152,24" Background="#FFEFE3FF"></TextBox>
         <Button x:Name="ButtonSearch" Content="Найти" FontSize="18" Margin="531,101,152,284" Click="search" Foreground="#FFCA7DFF" FontWeight="Bold" FontStyle="Italic" Background="#FF410066"></Button>
+        <CheckBox x:Name="Check" Content="Добавить поиск по последовательным символам" Margin="224,116,240,284" Background="#FFEAB7F0" Foreground="#FFCB80FF" Click="symbols"/>
     </Grid>
 </Window>

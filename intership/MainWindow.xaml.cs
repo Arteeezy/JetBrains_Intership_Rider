@@ -26,14 +26,24 @@ namespace intership
         {
             InitializeComponent();
         }
-
-    private void search(object sender, RoutedEventArgs e)
+        private void symbols(object sender, RoutedEventArgs e)
+        {
+           if (Check.IsChecked.Value)
+            {
+                dictSearch.temp = 1;
+            }
+            else
+            {
+                dictSearch.temp = 0;
+            }
+        }
+        private void search(object sender, RoutedEventArgs e)
         {
             string text = In.Text;
             string[] ans = dictSearch.search(text);
             Out.Text = "";
 
-            string Text = "";
+            string Text = " ";
             
             for (int i = 0; i < ans.Length; i++)
             {
