@@ -5,6 +5,8 @@ using System.Text;
 using System.Windows;
 
 namespace intership.dict
+
+// логика поиска совпадений
 {
     class Dict
     {
@@ -14,6 +16,7 @@ namespace intership.dict
         {
             this.path = path;
         }
+        // функция проверяет совпадение по последовательным символам
         public bool Match(string word, string line)
         {
             int index = 0;
@@ -27,12 +30,14 @@ namespace intership.dict
             }
             return false;
         }
+        // функция поиска совпадений в словаре вызывает массив найденных слов
         public string[] search(string Word)
         {
             using TextReader file = File.OpenText("../../../words.txt");
 
             List<string> results = new List<string>();
             string line = file.ReadLine();
+            // при нажатой галочке выполняется вызов функции Match
             if (temp == 1) {
                 while (line != null)
                 {
@@ -44,6 +49,7 @@ namespace intership.dict
                     line = file.ReadLine();
                 }
             }
+            // при отжатой галочке выполняется поиск только по подстроке
             else
             {
                 while (line != null)

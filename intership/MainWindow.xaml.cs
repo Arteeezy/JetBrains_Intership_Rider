@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using intership.dict;
 
 namespace intership
+// связь логики поиска с элементами UI интерфейса
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -26,6 +27,7 @@ namespace intership
         {
             InitializeComponent();
         }
+        // проверка на добавление поиска по последовательным символам
         private void symbols(object sender, RoutedEventArgs e)
         {
            if (Check.IsChecked.Value)
@@ -37,6 +39,7 @@ namespace intership
                 dictSearch.temp = 0;
             }
         }
+        // реализация ввода слова и вывода результата 
         private void search(object sender, RoutedEventArgs e)
         {
             string text = In.Text;
